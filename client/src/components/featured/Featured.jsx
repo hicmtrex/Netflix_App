@@ -14,9 +14,9 @@ const Featured = ({ type ,setGenre}) => {
         try {
           const res = await axiosInstance.get(`/movies/random?type=${type}`, {
             headers: {
-                token:
-                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMWIwNDZiODQ3OTBjNDM0MDAxYjgzMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2MjkxNjA1NzYsImV4cCI6MTYyOTU5MjU3Nn0.syScIkAPzNNGlvlKQNmTcowt0CdnxZ6xzgILFDcHEms ",
-              },
+              token:
+              "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken,
+            },
           });
           setContent(res.data[0]);
         } catch (err) {

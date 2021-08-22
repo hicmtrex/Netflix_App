@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+node_modules
 /.pnp
 .pnp.js
 
@@ -12,6 +13,7 @@
 build
 /build
 
+.env
 # misc
 .DS_Store
 .env
