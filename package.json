@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "start": "node api/index.js",
+    "heroku-postbuild": "npm install --prefix client && npm run build client",
+    "server": "nodemon api/index.js",
+    "client": "npm start --prefix client"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +18,9 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.7"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
   }
 }

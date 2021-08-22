@@ -1,0 +1,35 @@
+.info__container {    
+    background-color: var(--main-color);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    display: flex;
+
+.movie__info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+     font-size: 25px;
+     padding: 10px;
+    flex: 1;
+
+    h1{
+        text-align: center;
+        margin-top: 50px;
+        font-family: 'Roboto', sans-serif;
+       font-size: 100px;
+    }
+    p{
+        margin-bottom: 10px;
+    }
+
+}
+
+img{
+    flex: 2;
+    width: 600px;
+    height: 1000px;
+}
+
+}
